@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goldirham</title>
+  <meta name="description" content="Goldirham is four market-research tools built by one developer: Insight, Stack, Lens and Filings. Code computes every figure, and every figure says where it came from." />
+  <meta name="theme-color" content="#2a0910" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Reem+Kufi:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <canvas id="loom" aria-hidden="true"></canvas>
+
+  <header class="nav" id="top">
+    <a class="wordmark" href="#top">Goldirham</a>
+    <nav aria-label="Tools">
+      <ul class="nav-list">
+        <li><a href="#insight" data-nav="insight"><span class="code">INS</span><span class="nav-name">Insight</span></a></li>
+        <li><a href="#stack" data-nav="stack"><span class="code">STK</span><span class="nav-name">Stack</span></a></li>
+        <li><a href="#lens" data-nav="lens"><span class="code">LNS</span><span class="nav-name">Lens</span></a></li>
+        <li><a href="#filings" data-nav="filings"><span class="code">FIL</span><span class="nav-name">Filings</span></a></li>
+        <li><a href="#code" data-nav="code"><span class="code">SRC</span><span class="nav-name">Code</span></a></li>
+      </ul>
+    </nav>
+    <div class="fell" aria-hidden="true"><span class="fell-line"></span></div>
+  </header>
+
+  <main id="main">
+    <section class="hero" data-section="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h1 id="hero-title" class="display"><span>Code owns</span> <span>the numbers.</span></h1>
+        <p class="hero-sub">Goldirham is four market-research tools built by one developer. Language models read and summarise. Code computes every figure, and every figure says where it came from.</p>
+        <ul class="ledger" id="ledger" aria-label="The four tools"></ul>
+      </div>
+    </section>
+
+    <section class="sec" id="insight" data-section="insight" aria-labelledby="insight-title">
+      <div class="sec-head">
+        <h2 id="insight-title" class="product-name">Insight</h2>
+        <p class="lead">A research desk for the AI build-out. 234 assets, 26 of them scored on upside, safety and AI exposure.</p>
+        <p class="actions"><a class="btn" href="https://goldirham-insight.vercel.app/">Open Insight <svg class="arrow" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true" focusable="false"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a> <a class="link" href="https://github.com/ixtaqq/Goldirham-Insight">GitHub</a></p>
+      </div>
+
+      <div class="label wide">
+        <h3>Rank 26 assets your way.</h3>
+        <p>Insight scores every research asset from 0 to 10 on three questions: what could go right, what could go wrong, and how tied it is to the AI build-out. Set the weights and the board re-ranks with the formula Insight uses.</p>
+        <fieldset class="weights" id="weights">
+          <legend class="sr-only">Weights</legend>
+        </fieldset>
+        <div class="board-wrap">
+          <table class="board" id="board">
+            <caption class="sr-only">Assets ranked by weighted blend</caption>
+            <thead><tr><th scope="col">Rank</th><th scope="col">Asset</th><th scope="col" class="num"><span class="long">Upside</span><span class="short" aria-hidden="true">U</span></th><th scope="col" class="num"><span class="long">Safety</span><span class="short" aria-hidden="true">S</span></th><th scope="col" class="num">AI</th><th scope="col" class="num">Blend</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <p class="empty" id="board-empty" hidden>Every weight is at zero, so there is nothing to rank. Raise any weight above zero.</p>
+        </div>
+        <p class="formula" id="formula" aria-live="polite"></p>
+        <p class="actions"><button class="btn ghost" id="board-more" type="button" aria-expanded="false">Show all 26</button> <a class="link" id="blend-link" href="https://goldirham-insight.vercel.app/?rank=custom&amp;w=3-3-3">Open this blend in Insight <svg class="arrow" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true" focusable="false"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></p>
+        <p class="note">Editorial scores from Goldirham Insight (<code>lib/assets.ts</code>), each one marked not reviewed. Ties keep Insight's own order. Not financial advice.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="stack" data-section="stack" aria-labelledby="stack-title">
+      <div class="sec-head">
+        <h2 id="stack-title" class="product-name">Stack</h2>
+        <p class="lead">A morning brief on the chips, power and capital behind AI, sent on Telegram at the hour you choose.</p>
+        <p class="actions"><a class="btn" href="https://goldirham-stack.vercel.app/">Open Stack <svg class="arrow" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true" focusable="false"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a> <a class="link" href="https://goldirham-stack.vercel.app/briefing/">Read the latest brief</a> <a class="link" href="https://github.com/ixtaqq/ai-infra-digest">GitHub</a></p>
+      </div>
+
+      <div class="label">
+        <h3>Sixty-eight feeds in. One brief out.</h3>
+        <p>Stack reads 68 RSS feeds and the SEC filings of 35 companies, drops repeats and off-topic stories, sorts the rest into ten sectors from power to models, and sends one digest to Telegram at the hour each reader picks.</p>
+        <ol class="pipeline" id="pipeline"></ol>
+      </div>
+
+      <div class="label">
+        <h3>What one run keeps.</h3>
+        <ul class="headlines" id="headlines"></ul>
+        <p class="note">Illustrative run. Sample headlines, not today's news.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="lens" data-section="lens" aria-labelledby="lens-title">
+      <div class="sec-head">
+        <h2 id="lens-title" class="product-name">Lens</h2>
+        <p class="lead">Numbers before narrative. One private briefing before 08:00 in Kuala Lumpur, every figure computed in Python.</p>
+        <p class="actions"><a class="btn" href="https://goldirham-lens.vercel.app/">Open Lens <svg class="arrow" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true" focusable="false"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></p>
+      </div>
+
+      <div class="label wide">
+        <h3>A figure goes up only after it passes.</h3>
+        <p>One setup from the Lens v2 demo market: checked, computed and sent, then taken down the next morning when its price could not be confirmed.</p>
+        <div class="steps" id="steps" role="group" aria-label="Stages of the setup"></div>
+        <p class="step-text" id="step-text" aria-live="polite"></p>
+        <div class="ticket" id="ticket">
+          <div class="ticket-head"><span class="ticket-sym">KSTL</span><span class="ticket-name">Kestrel Systems</span><span class="tag">Demo data</span></div>
+          <dl class="ticket-grid" id="ticket-grid"></dl>
+        </div>
+        <p class="actions"><button class="btn ghost" id="replay" type="button">Run the morning again</button></p>
+      </div>
+
+      <div class="label">
+        <h3>Most mornings, nothing new.</h3>
+        <p>Lens v2 collects public prices for crypto, US stocks and ETFs, and Bursa Malaysia, cross-checks them, and computes indicators, setups and portfolio state in Python. One briefing goes to a private Telegram chat before 08:00 in Kuala Lumpur. A day with no setups is a normal day, and the briefing says so once.</p>
+        <ul class="days">
+          <li class="is-on"><span class="day-kind">Quiet day</span><span class="day-date">Wed 14 Oct</span><span class="day-n">0 setups</span></li>
+          <li><span class="day-kind">Setup day</span><span class="day-date">Thu 15 Oct</span><span class="day-n">1 setup</span></li>
+          <li class="is-miss"><span class="day-kind">Degraded data</span><span class="day-date">Fri 16 Oct</span><span class="day-n">2 disputed</span></li>
+        </ul>
+        <figure class="brief">
+          <figcaption>Goldirham Lens · sent 07:01 MYT · demo data</figcaption>
+          <div class="brief-body">
+            <p><strong>Goldirham Lens · Wed 14 Oct 2026</strong><br />Data as of Crypto (UTC) 12 Oct · Bursa 13 Oct · US 13 Oct<br />Data: every source verified.</p>
+            <p><strong>Portfolio · MYR 184,495.40</strong> <span class="dim">FX dated 13 Oct</span><br />
+            HOLD 9000.KL MYR 2.32 (13 Oct) −0.4% · 19.5% of portfolio · +26.0% unrealised<br />
+            HOLD 9001.KL MYR 8.79 (13 Oct) +1.3% · 16.2% of portfolio · +7.2% unrealised<br />
+            HOLD 9002.KL MYR 11.24 (13 Oct) +0.2% · 16.4% of portfolio · +6.0% unrealised<br />
+            HOLD BLOK-USD USD 30,756.88 (12 Oct) +3.3% · 16.2% of portfolio · +6.4% unrealised<br />
+            HOLD NRTH USD 470.54 (13 Oct) −0.6% · 15.8% of portfolio · +4.1% unrealised<br />
+            HOLD ORBT USD 94.72 (13 Oct) −0.8% · 15.9% of portfolio · +7.1% unrealised<br />
+            Exposure: crypto 16.2% · etf 35.3% · stock 48.5%</p>
+            <p><strong>What changed</strong><br />• BLOK-USD moved +3.3%</p>
+            <p><strong>Setups</strong><br />No new setups today. Most days look like this, and that is the point.</p>
+            <p><strong>Market</strong><br />Regime: risk-on · 75.0% of watchlist above its 200-day average<br />Crypto Fear &amp; Greed: 58 (Greed)</p>
+            <p class="dim">Research and decision support only. Not financial advice. Goldirham Lens never places trades. Targets are scenarios, and gaps can exceed a planned stop.</p>
+          </div>
+        </figure>
+        <p class="note">Demo data, generated by the real Lens v2 pipeline from a seeded synthetic market. Nothing here is a real price, a real portfolio or advice.</p>
+      </div>
+
+      <div class="label">
+        <h3>Its own backtest, published.</h3>
+        <p>The v1 pullback rules were tested on real prices for 12 assets, September 2022 to October 2026. They did not beat random entries with the same stops and targets. The report sits in the repo anyway, and no strategy produces setups until its exact version has one.</p>
+        <div class="versus">
+          <div class="vs miss"><span class="vs-n">0.03R</span><span class="vs-u">average per resolved trade, v1 rules</span><span class="src">reports/pullback_in_uptrend-52df5d457a0c.md. 106 resolved trades; 90% interval −0.25R to 0.30R.</span></div>
+          <div class="vs"><span class="vs-n">0.27R</span><span class="vs-u">average for random entries</span><span class="src">Same report. 100 runs with the same stops and targets; 5th to 95th percentile −0.02R to 0.57R.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="filings" data-section="filings" aria-labelledby="filings-title">
+      <div class="sec-head">
+        <h2 id="filings-title" class="product-name">Filings</h2>
+        <p class="lead">Ask the 10-K and 10-Q filings of twelve AI-infrastructure companies. It cites the passage, or it declines.</p>
+        <p class="actions"><a class="btn" href="https://ixtaqq.github.io/goldirham-filings/">Open Filings <svg class="arrow" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true" focusable="false"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a> <a class="link" href="https://github.com/ixtaqq/goldirham-filings">GitHub</a></p>
+      </div>
+
+      <div class="label wide">
+        <h3>Answers from SEC filings, cited to the passage.</h3>
+        <p>A local MCP server, so Claude Desktop or any MCP client can call it. EDGAR is free, and embeddings and answers come from local models through Ollama. Ask about a quarter it holds and the answer cites the exact characters it read. Ask about one it doesn't, and it says so.</p>
+        <div class="switch" role="group" aria-label="Example question">
+          <button type="button" class="switch-btn" data-qa="answered" aria-pressed="true">Indexed quarter</button>
+          <button type="button" class="switch-btn" data-qa="abstained" aria-pressed="false">Quarter not indexed</button>
+        </div>
+        <div class="qa" id="qa" aria-live="polite"></div>
+        <p class="note">Unedited output of <code>filings answer</code>, captured 7 November 2026. Full JSON in <code>site/examples/</code>.</p>
+      </div>
+
+      <div class="label">
+        <h3>Six read-only tools for any MCP client.</h3>
+        <dl class="tools" id="tools"></dl>
+      </div>
+
+      <div class="label">
+        <h3>Measured on 25 held-out questions. Three of five targets missed.</h3>
+        <p>Questions drafted from filings no tuning run had used, checked by hand, run once.</p>
+        <div class="board-wrap">
+          <table class="results" id="results">
+            <thead><tr><th scope="col">Metric</th><th scope="col" class="num">v1.0</th><th scope="col" class="num">Target</th><th scope="col">Result</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="note">Sources: <code>eval-all-2026-11-06-heldout-v1.json</code> and <code>retrieval-all-2026-11-06-heldout-v1.json</code>. With 4 unanswerable and 21 answerable questions, one item moves a rate by 4 to 25 points.</p>
+        <h4>What it doesn't do yet</h4>
+        <ul class="limits">
+          <li><strong>No 20-F filers.</strong> TSM, ASML and ARM aren't covered.</li>
+          <li><strong>Comparisons sit side by side.</strong> Each filing is answered on its own, and the answer doesn't compare them.</li>
+          <li><strong>A figure can carry the wrong duration.</strong> One held-out answer gave a nine-month total as the quarter's.</li>
+          <li><strong>The model is small.</strong> qwen3:8b wrongly declined 2 of 21 answerable held-out questions.</li>
+          <li><strong>Most eval questions are unchecked.</strong> Only the 25 held-out questions were checked by hand.</li>
+        </ul>
+      </div>
+
+      <div class="label">
+        <h3>One script from clone to server.</h3>
+        <p>Needs Python 3.11+, Docker Desktop and Ollama, all running, and about 7 GB of disk. The script indexes 96 filings, loads XBRL figures and checks every dependency. The first run takes about six minutes on a machine with a GPU, plus downloads.</p>
+        <div class="code-block">
+          <div class="code-head"><span>PowerShell</span><button type="button" class="copy" id="copy">Copy</button></div>
+          <pre id="quickstart"><code>git clone https://github.com/ixtaqq/goldirham-filings.git
+cd goldirham-filings
+powershell -ExecutionPolicy Bypass -File scripts\setup.ps1</code></pre>
+        </div>
+        <ul class="tickers" id="tickers" aria-label="Covered companies"></ul>
+      </div>
+    </section>
+
+    <section class="sec" id="code" data-section="code" aria-labelledby="code-title">
+      <div class="sec-head">
+        <h2 id="code-title" class="product-name">Read the code.</h2>
+        <p class="lead">Insight, Stack and Filings are public repositories with CI. Lens v2 is private; its showcase explains the method with output from the real pipeline.</p>
+      </div>
+      <div class="label wide">
+        <div class="board-wrap">
+          <table class="repos" id="repos">
+            <thead><tr><th scope="col">Repository</th><th scope="col">Built with</th><th scope="col">Checks</th><th scope="col"><span class="sr-only">Link</span></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <h3 class="rules-title">House rules</h3>
+        <ol class="rules" id="rules"></ol>
+      </div>
+    </section>
+
+    <section class="sec end" data-section="end" aria-labelledby="end-title">
+      <h2 id="end-title" class="display end-title">Check the numbers yourself.</h2>
+      <ul class="doors" id="doors"></ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Built by one developer. <a href="https://aizattaqq.vercel.app/">Portfolio</a> · <a href="https://github.com/ixtaqq">GitHub</a> · <a href="https://www.linkedin.com/in/aizattaqq/">LinkedIn</a></p>
+    <p class="dim">Research and decision support only. Not financial advice.</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
